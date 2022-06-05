@@ -11,7 +11,7 @@ namespace MoreNote.Logic.Entity.ConfigFile
         public RandomImangeServiceConfig PublicAPI { get; set; }
 
         public APPConfig APPConfig { get; set; } = new APPConfig();
-
+        public ImageSpidersConfig Spiders { get; set; }=new ImageSpidersConfig();
 
         public WebSiteConfig()
         {

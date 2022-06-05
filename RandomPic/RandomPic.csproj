@@ -22,6 +22,7 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+    <PackageReference Include="Snowflake.Core" Version="2.0.0" />
     <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="6.13.16" />
 	      <PackageReference Include="Macross.Json.Extensions" Version="2.2.0" />
   </ItemGroup>
