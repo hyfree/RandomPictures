@@ -92,7 +92,7 @@ namespace MoreNote.Controllers
         }
 
    
-        public async Task<IActionResult> GetRandomImage(string type, string format = "raw", int jsonSize = 1)
+        public async Task<IActionResult> RandomImage(string type, string format = "raw", int jsonSize = 1)
         {
             var randomImageList = randomImageService.GetRandomImageList();
             lock (_fuseObj)
@@ -146,7 +146,7 @@ namespace MoreNote.Controllers
             switch (format)
             {
                 case "raw":
-                    return Redirect($"{webcConfig.APPConfig.SiteUrl}/api/random-images/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}");
+                    return Redirect($"{webcConfig.APPConfig.SiteUrl}/core-system/random-images/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}");
 
                 case "json":
                     if (jsonSize < 0)
@@ -191,7 +191,7 @@ namespace MoreNote.Controllers
             string ext = Path.GetExtension(randomImage.FileName);
           
 
-            return $"{webcConfig.APPConfig.SiteUrl}/api/random-images/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}";
+            return $"{webcConfig.APPConfig.SiteUrl}/core-system/random-images/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}";
         }
 
       
