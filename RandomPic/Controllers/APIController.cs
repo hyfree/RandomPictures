@@ -146,7 +146,7 @@ namespace MoreNote.Controllers
             switch (format)
             {
                 case "raw":
-                    return Redirect($"{webcConfig.APPConfig.SiteUrl}/CacheService/RandomImages/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}");
+                    return Redirect($"{webcConfig.APPConfig.SiteUrl}/CacheServer/RandomImages/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}");
 
                 case "json":
                     if (jsonSize < 0)
@@ -191,7 +191,7 @@ namespace MoreNote.Controllers
             string ext = Path.GetExtension(randomImage.FileName);
           
 
-            return $"{webcConfig.APPConfig.SiteUrl}/CacheService/RandomImages/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}";
+            return $"{webcConfig.APPConfig.SiteUrl}/CacheServer/RandomImages/{randomImage.TypeNameMD5}/{randomImage.RandomImageId.ToHex() + ext}";
         }
 
       
