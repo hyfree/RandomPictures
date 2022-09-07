@@ -141,7 +141,7 @@ namespace MoreNoteWorkerService
                 upyun.WriteFile($"/upload/{SHAEncryptHelper.MD5Encrypt(type)}/{fileSHA1}{Path.GetExtension(name)}", imageBytes, true);
                 RandomImage randomImage = new RandomImage()
                 {
-                    RandomImageId = idGenerator.NextId(),
+                    Id = idGenerator.NextId(),
                     TypeName = type,
                     TypeNameMD5 = SHAEncryptHelper.MD5Encrypt(type),
                     TypeNameSHA1 = SHAEncryptHelper.Hash1Encrypt(type),
