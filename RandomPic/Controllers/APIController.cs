@@ -91,7 +91,7 @@ namespace MoreNote.Controllers
             public List<string> Images { get; set; }
         }
 
-   
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<IActionResult> RandomImage(string type, string format = "raw", int jsonSize = 1)
         {
             var randomImageList = randomImageService.GetRandomImageList();
@@ -202,6 +202,7 @@ namespace MoreNote.Controllers
         }
 
         [HttpPost]
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
         public async Task<IActionResult> UpYunImageServiceHook()
         {
             using (StreamReader reader = new StreamReader(Request.Body))
